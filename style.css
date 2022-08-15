@@ -1,0 +1,167 @@
+/* *, *::after,*::before{
+box-sizing: border-box;
+} */
+
+body{
+    background: rgb(95,26,99);
+    background: linear-gradient(90deg, rgba(95,26,99,1) 0%, rgba(71,9,121,0.9304096638655462) 35%, rgba(68,0,255,1) 100%);
+}
+
+
+.mother{
+    border-radius:  7%;
+    /* background-color: darkgray; */
+    width: 250px;
+    /* height: 300px; */
+    box-shadow: 0px 0px 20px 5px rgb(206, 180, 32);
+}
+
+.buttons{
+   background-color: darkolivegreen;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    cursor: pointer;
+    font-size: 50px;
+}
+ 
+#display{
+    border-radius: 5px 5px 0px 0px;
+    height: 70px;
+    width: 185px;
+    text-align: right;
+    font-size: 25px;
+    line-height: 100px;
+    padding: 30px;
+    border: 3px solid black;
+    background-color: whitesmoke;
+}
+
+.button{
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#equl{
+    background-color:lightblue;
+}
+
+#equl:hover{
+    background-color:lightblue;
+    background-color: rgba(0, 0, 255, 0.822);
+    transition: 0.5s;
+    color: black;
+}
+
+
+.button:hover{
+    background-color: lightslategray;
+    color: blue;
+    transition: 0.5s;
+}
+
+
+
+.clock{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 2px solid pink;
+    font-size: 24px;
+    color:red;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    position: relative;
+}
+
+.clock .number {
+    font-size: xx-large;
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1{--rotation:30deg}
+.clock .number2{ --rotation:60deg;}
+.clock .number3{ --rotation:90deg;}
+.clock .number4{ --rotation:120deg;}
+.clock .number5{ --rotation:150deg;}
+.clock .number6{ --rotation:180deg;}
+.clock .number7{ --rotation:210deg;}
+.clock .number8{ --rotation:240deg;}
+.clock .number9{ --rotation:270deg;}
+.clock .number10{ --rotation:300deg;}
+.clock .number11{ --rotation:330deg;}
+
+
+.clock .limbaOre{
+
+    --troy: 90deg;
+    position: absolute;
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    bottom: 48%;
+    left: 48%;
+    width: 10px;
+    height: 35%;
+    background-color: red;
+    transform-origin: bottom; 
+    transform: translateX(-48%) rotate(calc(var(--troy)));
+    z-index: 10;
+  
+}
+
+ .clock .limbaMinute{
+    z-index: 9;
+    left: 50%;
+    --troy: 245deg;
+    position: absolute;
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    bottom: 48%;
+    width: 10px;
+    height: 40%;
+    background-color: green;
+    transform-origin: bottom; 
+    transform: translateX(-48%) rotate(calc(var(--troy)))
+}
+
+
+.clock .limbaSecunde{
+    --troy: 180deg;
+    z-index: 8;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 50%;
+    position: absolute;
+    bottom: 50%;
+    width: 5px;
+    height: 48%;
+    background-color: yellow;
+    transform-origin: bottom; 
+    transform: translateX(-48%) rotate(calc(var(--troy)))
+} 
+
+.clock::after{
+    width: 35px;
+    height: 35px;
+    border: 2px  whitesmoke;
+    content: "";
+    background-color: darkcyan;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    z-index: 11;
+    border-radius: 50%;
+    background-image: url(./PNG/honeycomb.png);
+    background-position: center;
+    z-index: 11;
+}
