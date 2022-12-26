@@ -1,167 +1,183 @@
-/* *, *::after,*::before{
-box-sizing: border-box;
-} */
-
-body{
-    background: rgb(95,26,99);
-    background: linear-gradient(90deg, rgba(95,26,99,1) 0%, rgba(71,9,121,0.9304096638655462) 35%, rgba(68,0,255,1) 100%);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-
-.mother{
-    border-radius:  7%;
-    /* background-color: darkgray; */
-    width: 250px;
-    /* height: 300px; */
-    box-shadow: 0px 0px 20px 5px rgb(206, 180, 32);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.buttons{
-   background-color: darkolivegreen;
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    cursor: pointer;
-    font-size: 50px;
-}
- 
-#display{
-    border-radius: 5px 5px 0px 0px;
-    height: 70px;
-    width: 185px;
-    text-align: right;
-    font-size: 25px;
-    line-height: 100px;
-    padding: 30px;
-    border: 3px solid black;
-    background-color: whitesmoke;
+body {
+  background: rgb(95, 26, 99);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 26, 99, 1) 0%,
+    rgba(71, 9, 121, 0.9304096638655462) 35%,
+    rgba(68, 0, 255, 1) 100%
+  );
 }
 
-.button{
-    border-radius: 10%;
-    cursor: pointer;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
+.mother {
+  margin-top: 100px;
 }
 
-#equl{
-    background-color:lightblue;
+.container {
+  border: 2px solid #323330;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 300px;
+  height: 400px;
+  margin: 2vh auto 0 auto;
+  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
 }
 
-#equl:hover{
-    background-color:lightblue;
-    background-color: rgba(0, 0, 255, 0.822);
-    transition: 0.5s;
-    color: black;
+#display {
+  font-size: 30px;
+  text-align: right;
+  height: 75px;
+  line-height: 70px;
+  padding: 16px 8px;
+  font-size: 25px;
 }
 
-
-.button:hover{
-    background-color: lightslategray;
-    color: blue;
-    transition: 0.5s;
+.buttons {
+  display: grid;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid#999;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
-
-.clock{
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    border: 2px solid pink;
-    font-size: 24px;
-    color:red;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    position: relative;
+.buttons > div {
+  border-top: 1px solid #999;
+  border-right: 1px solid#999;
 }
 
-.clock .number {
-    font-size: xx-large;
-    --rotation: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transform: rotate(var(--rotation));
+.button {
+  background-color: rgba(36, 60, 104, 0.473);
+  /* border: 0.5px solid #999; */
+  line-height: 63px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.clock .number1{--rotation:30deg}
-.clock .number2{ --rotation:60deg;}
-.clock .number3{ --rotation:90deg;}
-.clock .number4{ --rotation:120deg;}
-.clock .number5{ --rotation:150deg;}
-.clock .number6{ --rotation:180deg;}
-.clock .number7{ --rotation:210deg;}
-.clock .number8{ --rotation:240deg;}
-.clock .number9{ --rotation:270deg;}
-.clock .number10{ --rotation:300deg;}
-.clock .number11{ --rotation:330deg;}
-
-
-.clock .limbaOre{
-
-    --troy: 90deg;
-    position: absolute;
-    border: 2px solid white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    bottom: 48%;
-    left: 48%;
-    width: 10px;
-    height: 35%;
-    background-color: red;
-    transform-origin: bottom; 
-    transform: translateX(-48%) rotate(calc(var(--troy)));
-    z-index: 10;
-  
+#equal {
+  background-color: rgb(110, 85, 255);
+  color: rgb(255, 253, 253);
+  font-size: 35px;
 }
 
- .clock .limbaMinute{
-    z-index: 9;
-    left: 50%;
-    --troy: 245deg;
-    position: absolute;
-    border: 2px solid white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    bottom: 48%;
-    width: 10px;
-    height: 40%;
-    background-color: green;
-    transform-origin: bottom; 
-    transform: translateX(-48%) rotate(calc(var(--troy)))
+.button:hover {
+  background-color: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
 }
 
+/* ///////////   CLOCK   //////////*/
+/* ///////////   CLOCK   //////////*/
+/* ///////////   CLOCK   //////////*/
 
-.clock .limbaSecunde{
-    --troy: 180deg;
-    z-index: 8;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    left: 50%;
-    position: absolute;
-    bottom: 50%;
-    width: 5px;
-    height: 48%;
-    background-color: yellow;
-    transform-origin: bottom; 
-    transform: translateX(-48%) rotate(calc(var(--troy)))
-} 
+.pearl {
+  margin-top: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
 
-.clock::after{
-    width: 35px;
-    height: 35px;
-    border: 2px  whitesmoke;
-    content: "";
-    background-color: darkcyan;
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    z-index: 11;
-    border-radius: 50%;
-    background-image: url(./PNG/honeycomb.png);
-    background-position: center;
-    z-index: 11;
+.clock {
+  background-image: url(./PNG/clock.png);
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  border: 4px solid rgb(206, 41, 221);
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.315),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.315),
+    0 15px 15px rgba(255, 255, 255, 0.315),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.315);
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  z-index: 1000;
+}
+
+.clock .hours,
+.clock .minutes,
+.clock .seconds {
+  position: absolute;
+}
+
+.clock .hours,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .minutes,
+.mn {
+  width: 190px;
+  height: 200px;
+}
+
+.clock .seconds,
+.sc {
+  width: 230px;
+  height: 240px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: "";
+  width: 6px;
+  height: 80px;
+  z-index: 10;
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: hotpink;
+}
+
+.mn:before {
+  content: "";
+  width: 6px;
+  height: 100px;
+  z-index: 11;
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: rgba(20, 203, 216, 0.993);
+}
+
+.sc:before {
+  content: "";
+  width: 3px;
+  height: 120px;
+  z-index: 12;
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: whitesmoke;
 }
